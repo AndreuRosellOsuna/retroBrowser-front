@@ -1,0 +1,10 @@
+<h1>{{title}}</h1>
+
+<ul>
+  <li class="games-list" *ngFor="let game of games">
+    <div>
+      <div class="game-key alert alert-primary">Name</div>
+      <div class="game-value alert alert-danger">{{game.name}}</div>
+    </div>
+  </li>
+</ul>
