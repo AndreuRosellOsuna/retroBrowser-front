@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
 import { AppRoutingModule } from './app-routing.module';
 import { GamesDbComponent } from './games-db/games-db.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatListModule, MatIconModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { GamesDbComponent } from './games-db/games-db.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatListModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
