@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import {Routes, RouterModule, Router} from '@angular/router';
 import {IndexComponent} from './index/index.component';
-import {GamesDbComponent} from './games-db/games-db.component';
+import {GamesDbComponent} from './views/games-db/games-db.component';
 
 const routes: Routes = [
   { path : '', redirectTo : '/index', pathMatch: 'full'},

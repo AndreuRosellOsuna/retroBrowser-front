@@ -1,0 +1,4 @@
+<button mat-button [matMenuTriggerFor]="menu">Consoles</button>
+<mat-menu #menu>
+  <button mat-menu-item (onclick)="selectConsole(console)" *ngFor="let console of consoles">{{console.name}}</button>
+</mat-menu>

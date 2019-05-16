@@ -4,23 +4,30 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
 import { AppRoutingModule } from './app-routing.module';
-import { GamesDbComponent } from './games-db/games-db.component';
+import { GamesDbComponent } from './views/games-db/games-db.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
-import { MatListModule, MatIconModule } from '@angular/material';
+import { MatListModule, MatIconModule, MatMenuModule } from '@angular/material';
+import { ConsolePanelComponent } from './console-panel/console-panel.component';
+import { GamesListComponent } from './games-list/games-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexComponent,
-    GamesDbComponent
+    GamesDbComponent,
+    ConsolePanelComponent,
+    GamesListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatMenuModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
