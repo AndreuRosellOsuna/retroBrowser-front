@@ -1,5 +1,7 @@
 <h1>{{title}}</h1>
 
-<app-console-panel [consoles]="consoles"></app-console-panel>
+<h2>{{selectedConsole && selectedConsole.name || 'foo'}}</h2>
+
+<app-console-panel [consoles]="consoles" (selectedConsole)=selectConsole($event)></app-console-panel>
 
 <app-games-list [games]="games"></app-games-list>

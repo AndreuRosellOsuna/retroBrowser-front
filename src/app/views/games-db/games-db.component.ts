@@ -28,4 +28,9 @@ export class GamesDbComponent implements OnInit {
       this.gamesService.getGamesFromConsoleInDb(this.selectedConsole.name).subscribe(games => this.games = games);
     });
   }
+
+  selectConsole(consoleSelected ) {
+    this.selectedConsole = consoleSelected;
+    this.gamesService.getGamesFromConsoleInDb(this.selectedConsole.name).subscribe(games => this.games = games);
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Console } from '../models/console.model';
 
 @Component({
@@ -11,16 +11,17 @@ export class ConsolePanelComponent implements OnInit {
   @Input()
   consoles: Console[];
 
-
-  selectedConsole: Console;
+  @Output()
+  selectedConsole = new EventEmitter<Console>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  selectConsole(console: Console): void {
-    this.selectedConsole = console;
-  }
+  selectConsole(consoleSelected: Console): void {
+    this.selectedConsole.emit(consoleSelected);
+    console.log("this.selectedConsole is " + this.selectedConsole);
 
+  }
 }
