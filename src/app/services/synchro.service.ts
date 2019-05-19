@@ -1,19 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
 import { Observable } from 'rxjs';
 
-import { Console } from '../models/console.model';
 import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ConsolesService {
+export class SynchroService {
 
   constructor(private http: HttpClient) { }
 
-  getConsoles(): Observable<Console[]> {
-    return this.http.get<Console[]>(environment.host + '/services/consoles');
+  doSynchro(): Observable<String> {
+    return this.http.get<String>(environment.host + '/services/performSynchro');
   }
 }

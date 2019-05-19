@@ -1,0 +1,9 @@
+
+
+<div *ngIf="resultMessage == undefined">
+  perform synchro ?
+  <button (click)="doSynchro()">go synchro</button>
+</div>
+<div *ngIf="resultMessage != undefined">
+  {{resultMessage}}
+</div>
