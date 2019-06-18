@@ -9,9 +9,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 import { MatListModule, MatIconModule, MatMenuModule } from '@angular/material';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { ConsolePanelComponent } from './console-panel/console-panel.component';
 import { GamesListComponent } from './games-list/games-list.component';
 import { SynchroComponent } from './views/synchro/synchro.component';
+import { RetroHeaderComponent } from './retro-header/retro-header.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { SynchroComponent } from './views/synchro/synchro.component';
     GamesDbComponent,
     ConsolePanelComponent,
     GamesListComponent,
-    SynchroComponent
+    SynchroComponent,
+    RetroHeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,7 @@ import { SynchroComponent } from './views/synchro/synchro.component';
     MatListModule,
     MatIconModule,
     MatMenuModule,
+    MatProgressSpinnerModule,
     HttpClientModule
   ],
   providers: [],

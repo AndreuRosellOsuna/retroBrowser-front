@@ -1,4 +1,6 @@
+<app-retro-header></app-retro-header>
 
+<h2>synchro</h2>
 
 <div *ngIf="resultMessage == undefined">
   perform synchro ?
@@ -6,4 +8,8 @@
 </div>
 <div *ngIf="resultMessage != undefined">
   {{resultMessage}}
+</div>
+<div *ngIf="synchronizing">
+  <mat-progress-spinner color="primary" mode="indeterminate"></mat-progress-spinner>
+  Synchronizing...
 </div>

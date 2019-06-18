@@ -11,12 +11,18 @@ export class SynchroComponent implements OnInit {
   /** Message of synchro result */
   resultMessage: string;
 
+  synchronizing = false;
+
   constructor(private service: SynchroService) { }
 
   ngOnInit() {
   }
 
   doSynchro() {
-    this.service.doSynchro().subscribe(result => this.resultMessage = result.toString());
+    this.synchronizing = true;
+    this.service.doSynchro().subscribe(result => {
+      this.resultMessage = result.toString();
+      this.synchronizing = false;
+    });
   }
 }

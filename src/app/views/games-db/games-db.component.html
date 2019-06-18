@@ -1,6 +1,8 @@
-<h1>{{title}}</h1>
+<app-retro-header></app-retro-header>
 
-<h2>{{selectedConsole && selectedConsole.name || 'foo'}}</h2>
+<h2>{{title}}</h2>
+
+<h3>{{selectedConsole && selectedConsole.name || 'foo'}}</h3>
 
 <app-console-panel [consoles]="consoles" (selectedConsole)=selectConsole($event)></app-console-panel>
 
